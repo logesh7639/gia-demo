@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Run Step
         run: echo "Running the application..."
-             sleep 15
+             sleep 5
 
   test:
     runs-on: ubuntu-latest
@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Test Step
         run: echo "Running tests..."
-             sleep 10
+             sleep 3
 
   deploy:
     runs-on: ubuntu-latest
