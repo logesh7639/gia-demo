@@ -1,0 +1,27 @@
+name: Multi Job CI/CD
+
+on:
+  push:
+
+jobs:
+
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Step
+        run: echo "Running the application..."
+
+  test:
+    runs-on: ubuntu-latest
+    needs: run
+    steps:
+      - name: Test Step
+        run: echo "Running tests..."
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Deploy Step
+        run: echo "Deploying application..."
+
